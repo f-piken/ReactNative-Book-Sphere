@@ -1,5 +1,5 @@
-import styles from "./styles";
-import searchBar from "./search";
-import produk from "./product";
+import styles from './styles';
+import {search, searchBar} from './search';
+import {product, productCard} from './product';
 
-export {produk, searchBar, styles};
+export {product, productCard, search, searchBar, styles};

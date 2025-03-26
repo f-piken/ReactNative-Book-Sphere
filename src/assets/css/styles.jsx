@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     marginTop: 50,
   },
-  serviceList: {
+  wallet: {
     backgroundColor: colors.white(),
     paddingVertical: 12,
     paddingHorizontal: 15,

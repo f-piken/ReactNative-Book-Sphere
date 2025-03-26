@@ -2,12 +2,12 @@ import {TruckFast, DiscountCircle, Star1} from 'iconsax-react-native';
 import {StyleSheet} from 'react-native';
 import {colors} from './theme';
 
-const renderStars = rating => {
+const renderStars = (rating, size) => {
   const stars = [];
   for (let i = 1; i <= 5; i++) {
     if (i <= Math.floor(rating)) {
       stars.push(
-        <Star1 key={i} size={16} color={colors.yellow()} variant="Bold" />,
+        <Star1 key={i} size={size} color={colors.yellow()} variant="Bold" />,
       ); // Full star
     } else if (i === Math.ceil(rating) && rating % 1 !== 0) {
       stars.push(
@@ -56,11 +56,13 @@ const horizontalItems = [
   },
 ];
 
-const product = [
+const products = [
   {
     id: 1,
     name: 'Matahari Minor',
     price: 1000000,
+    variant: 1,
+    deskripsi: 'isi deskripsi',
     terjual: 500,
     rating: 2.5,
     image: require('./assets/images/products/matahari-minor.jpeg'),
@@ -69,6 +71,8 @@ const product = [
     id: 2,
     name: 'Si Anak Pintar',
     price: 1000000,
+    variant: 1,
+    deskripsi: 'isi deskripsi',
     terjual: 500,
     rating: 4.5,
     image: require('./assets/images/products/si_anak_pintar.webp'),
@@ -77,6 +81,8 @@ const product = [
     id: 3,
     name: 'Matahari Minor',
     price: 1000000,
+    variant: 1,
+    deskripsi: 'isi deskripsi',
     terjual: 500,
     rating: 4,
     image: require('./assets/images/products/matahari-minor.jpeg'),
@@ -85,10 +91,12 @@ const product = [
     id: 4,
     name: 'Si Anak Pintar',
     price: 1000000,
+    variant: 1,
+    deskripsi: 'isi deskripsi',
     terjual: 500,
     rating: 4.5,
     image: require('./assets/images/products/si_anak_pintar.webp'),
   },
 ];
 
-export {renderStars, horizontalItems, product};
+export {renderStars, horizontalItems, products};
